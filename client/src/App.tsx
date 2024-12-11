@@ -1,5 +1,12 @@
-import React from 'react';
+import Post from './components/Post';
+import Layout from './layout/Layout';
 
 export default function App() {
-  return <div>App</div>;
+  return (
+    <>
+      <Layout>
+        <Post />
+      </Layout>
+    </>
+  );
 }
