@@ -1,0 +1,95 @@
+.sidenav {
+  position: fixed;
+  display: flex;
+  min-width: 17rem;
+  width: 17rem;
+  min-height: 100vh;
+  flex-direction: column;
+  background: url('../assets/pulsar.gif'), var(--dark-background);
+  background-size: 17.5rem;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-blend-mode: overlay;
+  overflow: hidden;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 17.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: var(--light-background);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &Accent {
+      font-family: var(--display-font);
+      color: var(--accent-color);
+      font-size: 3.75rem;
+      letter-spacing: -0.2rem;
+      line-height: 1rem;
+    }
+
+    &Uppercase {
+      font-size: 4rem;
+    }
+  }
+
+  .nav {
+    &List {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      margin: 0 2rem;
+      padding-bottom: 5rem;
+
+      &Item {
+        position: relative;
+        z-index: 0;
+        font-family: var(--display-font);
+        color: var(--light-background);
+        font-size: 1.75rem;
+        line-height: 1.75rem;
+
+        &::after {
+          content: '';
+          display: block;
+          position: relative;
+          z-index: -1;
+          width: 4.5ch;
+          transform: translate(0.5rem, -0.5rem);
+          border-bottom: 0.5rem solid var(--secondary-accent);
+        }
+
+        &::marker {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--light-background);
+    color: var(--dark-background);
+    width: 17rem;
+
+    font-family: 'Tiny5', sans-serif;
+    text-transform: uppercase;
+    font-size: 81px;
+    letter-spacing: -0.25px;
+    line-height: 50px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
